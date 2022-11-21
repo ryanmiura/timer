@@ -23,9 +23,9 @@ function inc(){
 	title.innerHTML = countm +":"+ counts
 	mosmin()
 	mosseg()
-	if(countm<0&&counts<0){
+	if(countm==0&&counts==0){
 		clearInterval(timer);
-	}else if(counts<0){
+	}else if(counts==0){
 		counts=60
 		countm--	
 	}
@@ -45,7 +45,7 @@ function pausar(){
 function resetar(){
 	clearInterval(timer);
 	countm=25
-	counts=0
+	counts=1
 	document.querySelector("#pause").disabled = true
 	document.querySelector("#start").disabled = false
 	mosmin()
